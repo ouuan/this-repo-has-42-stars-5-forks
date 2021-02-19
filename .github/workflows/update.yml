@@ -13,13 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update description
-        uses: ouuan/This-repo-has-x-stars-y-forks-action@v1
+        uses: ouuan/This-repo-has-x-stars-y-forks-action@v2
         with:
           token: ${{ secrets.TOKEN }}
-          template: "<star-fork>."
       - name: Update name
-        uses: ouuan/This-repo-has-x-stars-y-forks-action@v1
+        uses: ouuan/This-repo-has-x-stars-y-forks-action@v2
         with:
           token: ${{ secrets.TOKEN }}
-          template: "this-repo-has-<star>-stars-<fork>-forks"
           type: name
