@@ -1,0 +1,25 @@
+name: "This repo has x stars y forks"
+
+on:
+  push:
+  fork:
+  watch:
+    types: [started]
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update description
+        uses: ouuan/This-repo-has-x-stars-y-forks-action@v1
+        with:
+          token: ${{ secrets.TOKEN }}
+          template: "<star-fork>."
+      - name: Update name
+        uses: ouuan/This-repo-has-x-stars-y-forks-action@v1
+        with:
+          token: ${{ secrets.TOKEN }}
+          template: "this-repo-has-<star>-stars-<fork>-forks"
+          type: name
