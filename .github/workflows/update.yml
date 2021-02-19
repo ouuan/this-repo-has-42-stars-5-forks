@@ -16,6 +16,7 @@ jobs:
         uses: ouuan/This-repo-has-x-stars-y-forks-action@v2
         with:
           token: ${{ secrets.TOKEN }}
+          template: 'A demo for this-repo-has-x-stars-y-forks-action: <auto>.'
       - name: Update name
         uses: ouuan/This-repo-has-x-stars-y-forks-action@v2
         with:
